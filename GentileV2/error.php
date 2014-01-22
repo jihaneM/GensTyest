@@ -25,7 +25,10 @@
     <body>
         <div class="container">
 		
-			<h1>Votre Login ou Mot de passe est incorrect</h1>
+			<script>
+					alert('Votre Login ou Mot de passe est incorrect');
+					document.location.href = "index2.html";
+			</script>
 			
 			<section class="main">
 				

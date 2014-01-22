@@ -2,13 +2,15 @@
 <html lang="en">
     <head>
 		<meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+      <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> !>
         <title>Gentile</title>
-        <meta name="description" content="Custom Login Form Styling with CSS3" />
+       <!--  <meta name="description" content="Custom Login Form Styling with CSS3" />
         <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
         <meta name="author" content="Codrops" />
-        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="shortcut icon" href="../favicon.ico">  -->
+        
+        
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script src="js/modernizr.custom.63321.js"></script>
         <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
@@ -24,7 +26,8 @@
 			
 			
 			<section class="main">
-				<form class="form-2" action="connecter.php" method="post" name="form1">
+				<form class="form-2" action="connecter.php" method="post" name="form1" onsubmit="return valider ();">
+				
 					<h1><span class="log-in">Se connecter</span> or <span class="sign-up">S'inscrire</span></h1>
 					<p class="float">
 						<label for="login"><i class="icon-user"></i>Login</label>
@@ -36,7 +39,7 @@
 					</p>
 					<p class="clearfix"> 
 						<a href="inscrire.php" class="log-twitter">S'inscrire</a>    
-						<input type="submit" name="submit" value="Se Connecter" id="submit">
+						<input type="submit" name="submit" value="Se Connecter" id="submit" >
 					</p>
 				</form>
 			</section>
@@ -51,7 +54,7 @@
 			        $("<p class='opt'/>").append(
 			            $("<input type='checkbox' class='showpasswordcheckbox' id='showPassword' />").click(function() {
 			                var change = $(this).is(":checked") ? "text" : "password";
-			                var rep = $("<input placeholder='Password' type='" + change + "' />")
+			                var rep = $("<input placeholder='Password' type='" + change + "'/>")
 			                    .attr("id", $input.attr("id"))
 			                    .attr("name", $input.attr("name"))
 			                    .attr('class', $input.attr('class'))
@@ -60,7 +63,7 @@
 			                $input.remove();
 			                $input = rep;
 			             })
-			        ).append($("<label for='showPassword'/>").text("Show password")).insertAfter($input.parent());
+			        ).append($("<label for='showPassword'/>").text("Voir mot de passe")).insertAfter($input.parent());
 			    });
 
 			    $('#showPassword').click(function(){
@@ -74,5 +77,38 @@
 			    });
 			});
 		</script>
+		<!--<script>
+		 
+		function valider ( )
+		{		
+			if ( document.form1.login.value == "" && document.form1.login.value == "")
+			    {
+			        alert ( "Veuillez entrer votre login et votre mot de pass!" );
+			        valid = false;
+			return valid;
+			    }
+			    
+			
+			
+		    if ( document.form1.login.value == "" )
+		    {
+		        alert ( "Veuillez entrer votre login!" );
+		        valid = false;
+		return valid;
+		    }
+		    
+		
+		
+		 if ( document.fform1.password.value == "" )
+		    {
+		        alert ( "Veuillez entrer votre mot de pass !" );
+		        valid = false;
+		return valid;
+		    }
+		}
+		</script>-->
+
+
+
     </body>
 </html>
