@@ -1,37 +1,20 @@
 <?php session_start(); ?>
 <!doctype html>
-<html lang="es">
-<!-- Mirrored from www.bufa.es/google-maps-latitud-longitud/ by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 17 Jan 2014 14:12:19 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<html>
 <head>
-
-    <title>Jouer et Trouver les gentiles</title>
+ <meta charset="UTF-8"/>
+ <meta http-equiv="Content-Type" content="text/html">
+ <title>Jouer et Trouver les gentiles</title>
     
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.bufa.es/feed/">
-    <link rel="alternate" type="text/xml" title="RSS .92" href="http://www.bufa.es/feed/rss/">
-    <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://www.bufa.es/feed/atom/">
+   
     <link rel="pingback" href="http://www.bufa.es/xmlrpc.php" />
     <link rel="shortcut icon" type="image/x-icon" href="http://www.bufa.es/favicon.ico">
     <meta property="og:image" content="../wp-content/themes/bufa/images/thumbnail_latitud.jpg">
-    <link rel="author" href="https://plus.google.com/104832158592558852091">
-    
-<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.22 - http://yoast.com/wordpress/seo/ -->
-<meta name="description" content=""/>
-<link rel="canonical" href="index.html" />
-<!-- / Yoast WordPress SEO plugin. -->
 
-<link rel="alternate" type="application/rss+xml" title="Bufa Webmaster &raquo; Feed" href="http://www.bufa.es/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Bufa Webmaster &raquo; RSS de los comentarios" href="http://www.bufa.es/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Bufa Webmaster &raquo; Google maps: obtener latitud &amp; longitud RSS de los comentarios" href="feed/index.html" />
-<link rel='shortlink' href='http://www.bufa.es/?p=1877' />
     
 </head>
 
-<body class="page page-id-1877 page-template page-template-tpl_googlemaps-php">
+<body >
 
 <header id="header">
 	<div class="infos">
@@ -354,15 +337,16 @@ div#crosshair {
 						
 				<?php
 				//On selectionne les donnŽes
-					mysql_connect("localhost", "root", "root")or die("cannot connect"); 
+					mysql_connect("localhost", "root", "")or die("cannot connect"); 
 					mysql_select_db("gentile")or die("cannot select DB");
-					$profil = mysql_query("SELECT * FROM gentilet ORDER BY id ASC");
+					$sq="SELECT * FROM commune ";
+					$profil = mysql_query($sq);
 		 
 				while($affiche = mysql_fetch_array($profil))
-				{
-			echo '<option value="'.$affiche['gentile'].'">'.$affiche['gentile'].'</option>';
-			}	
-		
+				   {
+					echo '<option value="'.$affiche['nom_gentile'].'">'.$affiche['nom_gentile'].'</option>';
+					}	
+				
 				?>
 				</select>
 		        <input type="submit" value="Jouer" name="submit" id="submit" class="button">
@@ -394,8 +378,8 @@ div#crosshair {
 </div>
 
 
-<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
-<script type="text/javascript" src="../wp-content/themes/bufa/js/scripts.js"></script>
+<script type="text/javascript" src="./ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="./wp-content/themes/bufa/js/scripts.js"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>

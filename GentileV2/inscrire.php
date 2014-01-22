@@ -4,12 +4,12 @@
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Gentile</title>
+        <title>S'inscrire à Gentile</title>
         <meta name="description" content="Custom Login Form Styling with CSS3" />
         <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />
         <meta name="author" content="Codrops" />
         <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="styleInscrire.css" />
         <script src="js/modernizr.custom.63321.js"></script>
         <!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
 		<style>
@@ -24,20 +24,69 @@
 			
 			
 			<section class="main">
-				<form class="form-2" action="connecter.php" method="post" name="form1">
-					<h1><span class="log-in">Se connecter</span> or <span class="sign-up">S'inscrire</span></h1>
+				<form class="form-2" action="traitement.php" method="post">
+				
+				
+					<h1> <span class="sign-up">S'inscrire</span></h1>
+					
 					<p class="float">
-						<label for="login"><i class="icon-user"></i>Login</label>
-						<input type="text" name="login" id="login" placeholder="Login or email">
+						<label>Nom</label>
+						<input type="text" name="nom" placeholder="nom">
 					</p>
+				
+				
+				
 					<p class="float">
+						<label>Prénom</label>
+						<input type="text" name="prenom" placeholder="prenom" >
+					</p>
+					
+					
+				
+				    <p class="float">
+						<label>User</label>
+						<input type="text" name="user" placeholder="user">
+					</p>
+			     	
+				
+					
+					
+				    <p class="float">
 						<label for="password"><i class="icon-lock"></i>Mot de passe</label>
-						<input type="password" name="password" id="password" placeholder="Password" class="showpassword">
+						<input type="password" name="password" placeholder="Password" class="showpassword">
 					</p>
+				
+			
+				  <p class="float">
+						<label >email</label>
+						<input type="text" name="email" placeholder="email">
+					</p>
+					
+				
+			
+					
+				   <p class="float">
+						<label>pays</label>
+						<input type="text" name="pays" placeholder="pays">
+					</p>
+					
+									
 					<p class="clearfix"> 
-						<a href="inscrire.php" class="log-twitter">S'inscrire</a>    
-						<input type="submit" name="submit" value="Se Connecter" id="submit">
+					   
+						
+							
+					<script>
+					   
+					</script>
+					<input type="submit" value="S'inscrire" onclick="return show_confirm();">
+						
+						<a href="index2.html" class="log-twitter">Retourner</a>  
 					</p>
+					
+					 
+					
+				
+					
 				</form>
 			</section>
 			
@@ -60,7 +109,7 @@
 			                $input.remove();
 			                $input = rep;
 			             })
-			        ).append($("<label for='showPassword'/>").text("Show password")).insertAfter($input.parent());
+			        ).append($("<label for='showPassword'/>").text("Voir mot de passe")).insertAfter($input.parent());
 			    });
 
 			    $('#showPassword').click(function(){
@@ -74,5 +123,21 @@
 			    });
 			});
 		</script>
+		
+
+
+
+
+
+
+	
+	
+
+	
+		
+		
+		
+		
+		
     </body>
 </html>
